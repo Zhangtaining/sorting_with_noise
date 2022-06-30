@@ -1,3 +1,7 @@
 # sorting_with_noise
 
-## run the script
+## How to run the script
+```
+cd sorting
+python3 run_sorting.py
+```
