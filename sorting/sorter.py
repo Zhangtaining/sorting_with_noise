@@ -13,7 +13,6 @@ class Sorter:
         self.max_steps = max_steps
         self.reading_err_rate = reading_err_rate 
         self.sorting_err_rate = sorting_err_rate
-        self.current_step = 0
         self.records = []
         self.sorter = sorting_utils.get_sorting_algorithm(algorithm, reading_err_rate, sorting_err_rate) 
         self.sorter.set_initial_str(initial_str)
