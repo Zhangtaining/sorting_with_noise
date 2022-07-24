@@ -14,8 +14,8 @@ def build_sorting_experiment(algo):
         s = get_sorting_algorithm(
             algo,
             INITIAL_STR,
-            reading_noise_rate,
             0,
+            reading_noise_rate,
             MAX_SORTING_STEPS
         )
         s.start_sorting()
@@ -51,7 +51,7 @@ def visualize_results_by_algo(sorting_records):
         axis[chart_index].set_ylabel("Monotonicity Score")
         for noise_rate, r in records.items():
             record = np.array(r)
-            axis[chart_index].plot(record, label=noise_rate)
+            axis[chart_index].plot(record, label=f"reading_err={noise_rate}")
         chart_index += 1
     plt.subplots_adjust(wspace=0.4, hspace=0.4)
     plt.legend()
